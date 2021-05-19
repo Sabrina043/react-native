@@ -1,13 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Image, Pressable, Button, showAlert,Alert } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, Pressable, Button, showAlert, Alert, ActivityIndicator } from 'react-native';
 
 export default function App() {
-
-
-  
-
-
 
   return (
     <ScrollView style={styles.container}>
@@ -25,23 +20,22 @@ export default function App() {
         <Image source={require("./images/konexio-logo_1.png")}
           style={{ width: 315, height: 100 }} />
 
-    [
-
-
-
       </View>
 
-{/* const App = () => (      */}
-        <View style={styles.container}>
-          {/* <Button title="Show alert" onPress={showAlert} Alert= {Alert}/> */}
-          <Button
+      <View style={styles.container}>
+        {/* <Button title="Show alert" onPress={showAlert} Alert= {Alert}/> */}
+        <Button
           onPress={() => {
             alert('You tapped the button!');
           }}
-          title="Press Me" color="#fff9"
+          title="CLICK ME" color="purple"
         />
-          
+
+        <View style={[styles.container, styles.horizontal]}>
+          <ActivityIndicator size="large" color="#DAF"/>
         </View>
+
+      </View>
 
     </ScrollView>
   );
@@ -53,29 +47,29 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     // alignItems: 'center',
     // justifyContent: 'center',
-    
+
   },
   textColor: {
-    
+
     backgroundColor: '#fff',
-    
+
   },
   premier: {
-    
+
     fontSize: '30px',
-    
+
   },
   deuxième: {
-    
+
     textAlign: 'center',
-    
+
   },
   troisième: {
-    
+
     fontWeight: 'bold',
-    
+
   },
-  
+
 });
 
 
